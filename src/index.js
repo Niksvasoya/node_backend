@@ -91,30 +91,30 @@ app.get('/', async (req, res) => {
 
   ///////////////////////////////////
 
-  try {
-    const response = await axios.post(
-      'https://api.gohighlevel.com/v1/emails',
-      {
-        "email":"gopal1@yopmail.com",
-        "subject":"test",
-        "body":"test",
-        "from":{
-            "email":"gopal@yopmail.com",
-            "name":"test"
-        }
-    },
-      {
-        headers: {
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6Ik5WUzVveFR0VHExY3NQUUltSG5kIiwiY29tcGFueV9pZCI6IkRXWEhQT05WN3ozdGNFVjRCTXJZIiwidmVyc2lvbiI6MSwiaWF0IjoxNzA3MjMxNjQyNTM5LCJzdWIiOiJ1c2VyX2lkIn0.TuL_0-K3Xvjxc5Ts08XijOVW0zM2zfFHy-DqqKTAT_g`,
-          "Content-Type": "application/json",
-        },
-      }
-    );
+  // try {
+  //   const response = await axios.post(
+  //     'https://api.gohighlevel.com/v1/emails',
+  //     {
+  //       "email":"gopal1@yopmail.com",
+  //       "subject":"test",
+  //       "body":"test",
+  //       "from":{
+  //           "email":"gopal@yopmail.com",
+  //           "name":"test"
+  //       }
+  //   },
+  //     {
+  //       headers: {
+  //         Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6Ik5WUzVveFR0VHExY3NQUUltSG5kIiwiY29tcGFueV9pZCI6IkRXWEhQT05WN3ozdGNFVjRCTXJZIiwidmVyc2lvbiI6MSwiaWF0IjoxNzA3MjMxNjQyNTM5LCJzdWIiOiJ1c2VyX2lkIn0.TuL_0-K3Xvjxc5Ts08XijOVW0zM2zfFHy-DqqKTAT_g`,
+  //         "Content-Type": "application/json",
+  //       },
+  //     }
+  //   );
 
-    console.log("Email sent successfully:", response.data);
-  } catch (error) {
-    console.error("Error sending email:", error.response?.data || error.message);
-  }
+  //   console.log("Email sent successfully:", response.data);
+  // } catch (error) {
+  //   console.error("Error sending email:", error.response?.data || error.message);
+  // }
 
 
 
@@ -136,6 +136,8 @@ app.get('/', async (req, res) => {
   // } catch (error) {
   //   console.error('Error uploading file:', error);
   // }
+  res.send('Node.js backend');
+
 });
 // Set up main routes
 app.use("/", mainRoutes);
