@@ -136,7 +136,12 @@ app.get('/', async (req, res) => {
   // } catch (error) {
   //   console.error('Error uploading file:', error);
   // }
-  res.send('Node.js backend');
+  const data = {
+    name:"nikul",
+    surname:"vasoya",
+    age:24
+  }
+  res.send(data);
 
 });
 // Set up main routes
